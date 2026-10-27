@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PraRoz - Web Design Course</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .hero {
+            min-height: 100vh;
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.42),
+                    rgba(0, 0, 0, 0.48)
+                ),
+                url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2000&q=85");
+
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .nav-link {
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ff7200;
+        }
+
+        .search-input {
+            min-width: 0;
+            width: 100%;
+            background: transparent;
+            color: white;
+            outline: none;
+        }
+
+        .search-input::placeholder {
+            color: #dddddd;
+        }
+
+        .orange-btn {
+            background: #ff7200;
+            color: #111111;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .orange-btn:hover {
+            background: #ff9b45;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 12px 2px;
+            margin-top: 12px;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #ff7200;
+            color: white;
+            outline: none;
+        }
+
+        .login-input::placeholder {
+            color: #eeeeee;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #ff7200;
+            transform: translateY(-4px);
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                background-position: center;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+
+    <!-- BACKGROUND / HERO -->
+    <div class="hero">
+
+        <!-- NAVBAR -->
+        <header class="mx-auto flex max-w-7xl flex-wrap
+                       items-center justify-between gap-5 px-6 py-6">
+
+            <!-- LOGO -->
+            <a href="#home"
+               class="text-3xl font-extrabold tracking-tight
+                      text-orange-500">
+                PraRoz<span class="text-white">®</span>
+            </a>
+
+            <!-- NAVIGATION -->
+            <nav class="flex flex-wrap items-center gap-x-7 gap-y-4">
+
+                <a href="#home" class="nav-link">HOME</a>
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#service" class="nav-link">SERVICE</a>
+                <a href="#design" class="nav-link">DESIGN</a>
+                <a href="#contact" class="nav-link">CONTACT</a>
+
+            </nav>
+
+            <!-- SEARCH BAR -->
+            <form id="search-form"
+                  class="flex h-10 w-full max-w-xs overflow-hidden
+                         rounded-md border border-orange-500">
+
+                <input
+                    type="search"
+                    id="search"
+                    placeholder="Type to Search"
+                    class="search-input px-3 text-sm"
+                    aria-label="Search"
+                >
+
+                <button type="submit"
+                        class="orange-btn px-4 text-sm">
+                    Search
+                </button>
+
+            </form>
+
+        </header>
+
+
+        <!-- MAIN CONTENT -->
+        <main id="home"
+              class="mx-auto grid max-w-7xl items-center gap-12
+                     px-6 pb-16 pt-12
+                     md:grid-cols-[1.5fr_0.8fr]
+                     md:pt-16 lg:gap-20">
+
+            <!-- LEFT CONTENT -->
+            <section id="about" class="max-w-2xl">
+
+                <h1 class="text-4xl font-bold leading-tight
+                           sm:text-5xl lg:text-6xl">
+
+                    Web Design &amp;
+
+                    <span class="block py-2 text-orange-500">
+                        Development
+                    </span>
+
+                    <span class="block">
+                        Course
+                    </span>
+
+                </h1>
+
+                <p class="mt-5 max-w-xl text-sm leading-7
+                          text-gray-200 sm:text-base">
+
+                    Web Design is a specialisation of the design stream.
+                    It involves HTML, CSS, WYSIWYG editing software,
+                    markup validators, and other tools used to create
+                    modern and attractive web design elements.
+
+                </p>
+
+                <a href="#service"
+                   class="orange-btn mt-7 inline-block rounded-lg
+                          px-8 py-3 text-sm">
+
+                    JOIN US
+
+                </a>
+
+                <!-- ABOUT SECTION -->
+                <div id="service" class="mt-10 scroll-mt-8">
+
+                    <h2 class="text-xl font-bold text-orange-500">
+                        Our Services
+                    </h2>
+
+                    <p class="mt-2 max-w-lg text-sm leading-6
+                              text-gray-200">
+
+                        Learn website design, HTML, CSS and responsive
+                        layouts to build your own web projects.
+
+                    </p>
+
+                </div>
+
+                <!-- DESIGN SECTION -->
+                <div id="design" class="mt-6 scroll-mt-8">
+
+                    <h2 class="text-lg font-bold">
+                        Learn. Design. Create.
+                    </h2>
+
+                </div>
+
+            </section>
+
+
+            <!-- RIGHT SIDE: LOGIN FORM -->
+            <section id="contact"
+                     class="mx-auto w-full max-w-sm scroll-mt-8
+                            rounded-xl border border-white/10
+                            bg-black/90 p-6 shadow-2xl sm:p-7">
+
+                <h2 class="rounded-lg bg-white px-4 py-3
+                           text-center text-xl font-bold
+                           text-orange-600">
+
+                    Login Here
+
+                </h2>
+
+                <form id="login-form" class="mt-5">
+
+                    <label for="email" class="sr-only">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter Email Here"
+                        autocomplete="email"
+                        required
+                        class="login-input"
+                    >
+
+                    <label for="password" class="sr-only">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter Password Here"
+                        autocomplete="current-password"
+                        required
+                        class="login-input"
+                    >
+
+                    <!-- FIELDSET -->
+                    <fieldset class="mt-5 rounded-md border
+                                     border-white/20 p-3">
+
+                        <legend class="px-2 text-sm text-gray-300">
+                            Login Options
+                        </legend>
+
+                        <label class="flex items-center gap-2 text-sm
+                                      text-gray-300">
+
+                            <input type="checkbox"
+                                   name="remember"
+                                   class="accent-orange-500">
+
+                            Remember me
+
+                        </label>
+
+                    </fieldset>
+
+                    <button type="submit"
+                            class="orange-btn mt-5 w-full
+                                   rounded-lg py-3">
+
+                        Login
+
+                    </button>
+
+                </form>
+
+                <p class="mt-4 text-center text-sm">
+                    Don't have an account?
+                </p>
+
+                <a href="#contact"
+                   class="mt-1 block text-center text-sm
+                          text-orange-500 hover:underline">
+
+                    Sign up here
+
+                </a>
+
+                <p class="mt-5 text-center text-sm text-gray-300">
+                    Log in with
+                </p>
+
+                <!-- SOCIAL MEDIA ICONS -->
+                <div class="mt-4 flex justify-center gap-4">
+
+                    <a href="https://facebook.com"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="social-icon"
+                       aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="https://instagram.com"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="social-icon"
+                       aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a href="https://twitter.com"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="social-icon"
+                       aria-label="Twitter">
+
+                        <i class="fa-brands fa-twitter"></i>
+
+                    </a>
+
+                    <a href="https://google.com"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="social-icon"
+                       aria-label="Google">
+
+                        <i class="fa-brands fa-google"></i>
+
+                    </a>
+
+                    <a href="https://skype.com"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="social-icon"
+                       aria-label="Skype">
+
+                        <i class="fa-brands fa-skype"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-black px-6 py-5 text-center
+                   text-sm text-gray-400">
+
+        PraRoz | Web Design &amp; Development Course
+
+    </footer>
+
+
+    <!-- DEMO FORM BEHAVIOUR -->
+    <script>
+        // Search form demonstration
+        document.getElementById("search-form")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const query = document.getElementById("search").value.trim();
+
+                if (query) {
+                    alert("You searched for: " + query);
+                }
+            });
+
+        // Login form demonstration
+        document.getElementById("login-form")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                alert("Demo only: A real login system needs a backend.");
+            });
+    </script>
+
+</body>
+</html>
